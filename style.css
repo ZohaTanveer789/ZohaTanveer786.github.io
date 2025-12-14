@@ -65,7 +65,8 @@ nav a {
     border-radius: 10px;
     text-align: left;
     margin: 5px;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+    box-sizing: border-box; 
+   margin-top:20px/* Ensures padding doesn't break width */
 }
 
 /* Specific Card Styling (Optional utility) */
@@ -193,6 +194,7 @@ button:hover {
         margin: 20px auto; /* Centers list on mobile */
     }
 }
+
 
 
 
