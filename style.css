@@ -47,7 +47,7 @@ nav a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 50px;
 }
 
 
@@ -193,5 +193,6 @@ button:hover {
         margin: 20px auto; /* Centers list on mobile */
     }
 }
+
 
 
