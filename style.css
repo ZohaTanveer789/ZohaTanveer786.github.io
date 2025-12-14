@@ -1,108 +1,131 @@
-/* 1. Background Image Styling */
+/* ===========================
+   1. Global & Background
+   =========================== */
 body {
-    background-image: url('images/Background.png'); 
+    background-image: url('images/Background.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
     margin: 0;
     font-family: sans-serif;
+    text-align: center;
 }
 
-/* 2. Navigation Bar */
+/* ===========================
+   2. Navigation
+   =========================== */
 nav a {
-    display: inline-block;    
-    padding: 20px;         
+    display: inline-block;
+    padding: 20px;
+    margin: 0 20px;
     color: burlywood;
-    margin: 0 20px;        
-    text-decoration: none; 
+    text-decoration: none;
     font-weight: bold;
     font-size: 25px;
 }
 
-/* 3. Headings */
-h1 {
-    font-size: 80px; 
-    text-align: center;
-    font-family: 'Times New Roman', serif;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: black;
-}
+/* ===========================
+   3. Layout Containers
+   =========================== */
 
-h3 {
-    font-family: Arial, Helvetica, sans-serif !important; 
-    font-weight: normal;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-    margin-top: 5px;
-    margin-bottom: 40px;
-    color: black;
-}
-
-/* 4. About Me Section (Flexbox Container) */
+/* Wrapper for Side-by-Side Content (About Section) */
 .about-container {
-    display: flex;              /* Image aur Text side-by-side */
-    align-items: center;        /* Vertically center */
-    justify-content: center;    /* Screen ke center mein */
-    gap: 50px;                  /* Beech ka faasla */
-    max-width: 1100px;          
-    margin: 50px auto;          
-    padding: 0 20px; 
-   
-          
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
 }
-.single-box /*shows the skills section box */
-{
-    display: flex;              /* Image aur Text side-by-side */
-    align-items: left;        /* Vertically center */
-    justify-content: left;    /* Screen ke center mein */
-    gap: 10px;                  /* Beech ka faasla */
-    border-radius: 20px;         
-    margin: 5px;          
-    padding: 30px; 
-    width: 300px;
-    flex-direction: column;           
+
+/* Wrapper for Flex Items (Skills/Cards Section) */
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
 }
-.main-container{
-  display: flex;            /* Important: Ye items ko line mein lata hai */
-  justify-content: center;  /* Screen ke center mein karne ke liye */
-  gap: 20px;                /* Dono boxes ke darmiyan gap (fasla) */
-  flex-wrap: wrap;          /* Mobile par ye automatic niche aa jayenge */
-  padding: 50px;
+
+
+/* Generic Content Box */
+.single-box {
+    flex: 0 1 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Fixed: 'left' was invalid */
+    justify-content: flex-start;
+    background-color: burlywood;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
 }
-/* Image Wrapper (FIXED: Added the missing dot) */
+
+/* Specific Card Styling (Optional utility) */
+.card {
+    background-color: burlywood;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+/* Image Wrapper */
 .about-image-wrapper {
-    flex: 1;                    
-    max-width: 450px;           
+    flex: 1;
+    max-width: 450px;
 }
 
 .about-image-wrapper img {
-    width: 100%;                
+    width: 100%;
     height: auto;
-    border-radius: 30px;        
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-}
-
-/* Text Box Styling */
-.single-box {
-    flex: 1;                    
-    background-color: burlywood; 
-    color: black;
-    padding: 40px;
     border-radius: 30px;
-    text-align: left;
-    margin: 0; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* ===========================
+   4. Typography
+   =========================== */
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 80px;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+h6 {
+    text-align: left;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: rgba(122, 37, 37, 0.61);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 50px 0 20px 20px;
+}
+
+/* Headings inside Colored Boxes */
 .single-box h2 {
     font-family: 'Times New Roman', serif;
     font-size: 3rem;
-    margin-top: 0; 
-    margin-bottom: 20px;
-    color: black;
     font-weight: bold;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .single-box p {
@@ -110,66 +133,62 @@ h3 {
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 0;
-    background-color: transparent;
 }
 
-/* 5. Mobile Responsive (Phone View) */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Phone par upar-neechay */
-        text-align: center;
-    }
-    
-    .single-box {
-        text-align: center;     
-        width: 100%;
-    }
-
-    .about-image-wrapper {
-        max-width: 80%; 
-        margin-bottom: 20px;    /* Phone par image ke neechay thora gap */
-    }
-}
-
-/* 6. Skills List Styling */
+/* ===========================
+   5. Lists & Buttons
+   =========================== */
 ul {
     background-color: burlywood;
     max-width: 450px;
     padding: 30px;
     border-radius: 25px;
     font-size: 20px;
-    text-align:left;
-    margin-left: 10%; 
-    margin-top: 50px; 
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 50px;
     list-style-position: inside;
 }
 
-/* 7. Button Styling */
 button {
     padding: 15px 30px;
     background-color: burlywood;
+    color: #5D4037;
     font-size: 20px;
+    font-weight: bold;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    color: #5D4037;
-    font-weight: bold;
-    font-family: sans-serif;
     transition: transform 0.2s;
 }
 
 button:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
     opacity: 0.9;
 }
 
-/* 8. Footer Link */
-h6 {
-    text-align: left;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    margin: 50px 0 20px 20px;
-    color: rgba(122, 37, 37, 0.61);
-    font-weight: normal;
-    letter-spacing: 1px;
+/* ===========================
+   6. Mobile Responsive
+   =========================== */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .single-box {
+        text-align: center;
+        align-items: center; /* Centers items inside flex box on mobile */
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-image-wrapper {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    
+    ul {
+        margin: 20px auto; /* Centers list on mobile */
+    }
 }
