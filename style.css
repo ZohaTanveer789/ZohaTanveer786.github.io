@@ -115,7 +115,7 @@ h1 {
     font-family: 'Times New Roman', serif;
     font-size: 80px;
     color: black;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -217,3 +217,4 @@ button:hover {
         margin: 20px auto; /* Centers list on mobile */
     }
 }
+
