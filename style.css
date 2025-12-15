@@ -7,7 +7,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
+    margin:20px;
     font-family: sans-serif;
     text-align: center;
 }
@@ -75,7 +75,8 @@ nav a {
     padding: 20px;
     max-width: 600px;
     border-radius: 20px;
-    
+    margin-top: 0px;
+   
     box-sizing: border-box;
 }
 .card h2 {
@@ -86,6 +87,7 @@ nav a {
 .card ul {
   margin-top: 0;
   margin-bottom: 0;
+  
 }
 
   
@@ -135,6 +137,7 @@ h6 {
     font-weight: normal;
     letter-spacing: 1px;
     margin: 50px 0 20px 20px;
+    margin-top: 0;
 }
 
 /* Headings inside Colored Boxes */
