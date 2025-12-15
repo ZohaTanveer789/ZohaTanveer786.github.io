@@ -70,7 +70,7 @@ nav a {
 /* Specific Card Styling (Optional utility) */
 .card {
     background-color: burlywood;
-    width: 600px;;
+    width: 700px;;
     border-radius: 20px;
     padding: 20px;
     max-width: 600px;
@@ -214,3 +214,4 @@ button:hover {
         margin: 20px auto; /* Centers list on mobile */
     }
 }
+
