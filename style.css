@@ -10,7 +10,6 @@ body {
     margin: 0;
     font-family: sans-serif;
     text-align: center;
-   line-height:1.4;
 }
 
 /* ===========================
@@ -65,8 +64,7 @@ nav a {
     border-radius: 10px;
     text-align: left;
     margin: 5px;
-    box-sizing: border-box; 
-   margin-top:20px/* Ensures padding doesn't break width */
+    box-sizing: border-box; /* Ensures padding doesn't break width */
 }
 
 /* Specific Card Styling (Optional utility) */
@@ -75,6 +73,20 @@ nav a {
     width: fit-content;
     border-radius: 20px;
 }
+.card h2 {
+  margin: 0 0 6px 0;
+}
+
+.card p,
+.card ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+  
+
+
+
 
 /* Image Wrapper */
 .about-image-wrapper {
@@ -148,9 +160,12 @@ ul {
     font-size: 20px;
     text-align: left;
     margin-left: 10%;
-    margin-top: 50px;
+    
     list-style-position: inside;
+    
 }
+
+
 
 button {
     padding: 15px 30px;
@@ -194,7 +209,3 @@ button:hover {
         margin: 20px auto; /* Centers list on mobile */
     }
 }
-
-
-
-
