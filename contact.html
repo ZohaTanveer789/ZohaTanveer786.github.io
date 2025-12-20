@@ -1,18 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - Zoha Tanveer</title>
         <link rel="icon" type="image/png" href="images/Favicon.png"> 
-         <link rel="stylesheet" href="style.css">
- 
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body style="background-image: url(images/Background.png);">
-     <nav>    
-          <a  href="index.html">Home</a>
-          <a  href="about.html"> About</a>
-          <a href="project.html">Projects</a>
-          <a  href="contact.html">Contact Me</a>
-           
-      </nav>  
-      <h1>Contact Me</h1> 
+    <body style="background-image: url('images/Background.png');">
+        <nav>    
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>  
+      
+        <div style="height: 50px;"></div>
+        <h1 style="border-top:0px ;">Get In Touch</h1>
+        <p style="color: black; font-size: 1.2rem;">Have a question or want to work together?</p>
+
+        <div class="main-container">
+            <div class="card" style="max-width: 500px;">
+                <h2>Send a Message</h2>
+                <form action="https://formspree.io/f/mwvelqol" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    
+    <input type="hidden" name="_next" value="https://zohatanveer789.github.io/ZohaTanveer786.github.io/contact.html">
+    
+    <button type="submit">Send Message</button>
+</form>
+            </div>
+
+            <div class="card" style="max-width: 500px;">
+                <h2>Connect With Me</h2>
+                <p>Feel free to reach out via email or follow my professional journey online.</p>
+                <br>
+                <ul class="contact-list">
+                    <li><strong>Email:</strong> zohatanveer2006@gmail.com</li>
+                    <li><strong>Linkdin:</strong><a href="https://www.linkedin.com/in/zoha-tanveer-49356a206" style="text-decoration: none;color: black;">www.linkedin.com/in/zoha-tanveer-49356a206</a></li>
+                    <li><strong>Github:</strong><a href="https://github.com/zohatanveer789" style="text-decoration: none;color: black;">https://github.com/zohatanveer789</a></li>
+
+                </ul>
+                <div style="margin-top: 20px;">
+                    <a href="https://github.com/zohatanveer789" target="_blank"><button style="font-size: 14px; padding: 10px 20px;">GitHub</button></a>
+                    <a href="https://www.linkedin.com/in/zoha-tanveer-49356a206" target="_blank"><button style="font-size: 14px; padding: 10px 20px;">LinkedIn</button></a>
+                    <a href="mailto:zohatanveer2006@gmail.com" target="_blank"><button style="font-size: 14px; padding: 10px 20px;">E-mail</button></a>
+                  </div>
+            </div>
+        </div>
     </body>
 </html>
