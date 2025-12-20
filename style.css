@@ -2,139 +2,88 @@
    1. Global & Background
    =========================== */
 body {
-    /* Sets the background image */
-    background-image: url('images/Background.png');
-    
-    /* Ensures the image covers the whole screen without stretching weirdly */
     background-size: cover; 
-    
-    /* Keeps the background image still when you scroll down */
     background-attachment: fixed;
-    
-    /* Centers the image on the screen */
     background-position: center;
-    
-    /* Prevents the image from tiling (repeating) if the screen is huge */
     background-repeat: no-repeat;
-    
-    /* Adds space around the very edge of the browser window */
     margin: 20px;
-    
-    /* Sets the font for all text on the page */
     font-family: sans-serif;
-    
-    /* Centers all text by default */
     text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* ===========================
    2. Navigation
    =========================== */
 nav a {
-    /* Allows the links to sit next to each other but still accept padding */
     display: inline-block;
-    
-    /* Adds breathing room inside the link clickable area */
     padding: 20px;
-    
-    /* Adds space between the links */
     margin: 0 20px;
-    
-    /* Sets the text color */
     color: burlywood;
-    
-    /* Removes the underline from links */
     text-decoration: none;
-    
-    /* Makes the text thick */
     font-weight: bold;
-    
-    /* Sets the text size */
     font-size: 25px;
+}
+
+/* Global Fixes */
+nav a:hover {
+    color: #5D4037;
+    text-decoration: underline;
 }
 
 /* ===========================
    3. Layout Containers
    =========================== */
-
-/* Wrapper for Side-by-Side Content (About Section) */
 .about-container {
-    /* Enables Flexbox layout (puts items in a row) */
     display: flex;
-    
-    /* Centers items vertically (top to bottom) */
     align-items: center;
-    
-    /* Centers items horizontally (left to right) */
     justify-content: center;
-    
-    /* Adds space between the image and the text box */
     gap: 50px;
-    
-    /* Prevents the container from getting too wide on large screens */
     max-width: 1100px;
-    
-    /* Centers the container itself on the page */
     margin: 50px auto;
-    
     padding: 0 20px;
 }
 
-/* Wrapper for Flex Items (Skills/Cards Section) */
 .main-container {
     display: flex;
-    
-    /* Centers the cards in the middle of the screen */
     justify-content: center;
-    
-    /* Allows cards to move to the next line if the screen is too small */
     flex-wrap: wrap;
-    
     gap: 20px;
     padding: 20px;
 }
 
-
-/* Generic Content Box (Used in About Me) */
 .single-box {
-    /* Allows the box to grow/shrink automatically */
     flex: 0 1 auto;
-    
     max-width: 600px;
     display: flex;
-    
-    /* Stacks content inside this box vertically (top to bottom) */
     flex-direction: column;
-    
-    /* Aligns text to the start (left) inside the flex container */
     align-items: flex-start; 
     justify-content: flex-start;
-    
     background-color: burlywood;
     color: black;
     padding: 40px;
-    border-radius: 10px; /* Rounds the corners */
+    border-radius: 10px;
     text-align: left;
     margin: 5px;
-    
-    /* Ensures padding is included in the width calculation (prevents layout breaking) */
     box-sizing: border-box; 
 }
 
-/* Specific Card Styling (Skills/Education) */
 .card {
     background-color: burlywood;
-    width: 100%; /* Changed from fixed 1000px to responsive 100% */
-    max-width: 600px; /* Prevents it from getting too wide */
+    width: 100%;
+    max-width: 600px;
     border-radius: 20px;
     padding: 20px;
     margin-top: 0px;
     box-sizing: border-box;
-    text-align: left; /* Ensures lists inside cards align left */
+    text-align: left;
 }
 
 .card h2 {
-    margin: 0 0 15px 0; /* Adds a little space below the header */
+    margin: 0 0 15px 0;
 }
 
 .card p,
@@ -143,18 +92,15 @@ nav a {
     margin-bottom: 0;
 }
 
-/* Image Wrapper */
 .about-image-wrapper {
-    flex: 1; /* Takes up 1 part of the available space */
+    flex: 1;
     max-width: 450px;
 }
 
 .about-image-wrapper img {
-    width: 100%; /* Forces image to fit its container */
-    height: auto; /* Maintains aspect ratio */
+    width: 100%;
+    height: auto;
     border-radius: 30px;
-    
-    /* Adds a subtle shadow behind the image */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -172,8 +118,8 @@ h1 {
 h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    font-weight: normal; /* Removes bold */
-    letter-spacing: 1px; /* Adds space between letters */
+    font-weight: normal;
+    letter-spacing: 1px;
     color: black;
     margin-top: 5px;
     margin-bottom: 40px;
@@ -186,10 +132,9 @@ h6 {
     color: rgba(122, 37, 37, 0.61);
     font-weight: normal;
     letter-spacing: 1px;
-    margin: 0 0 20px 0; /* Cleaned up margins */
+    margin: 0 0 20px 0;
 }
 
-/* Headings inside Colored Boxes */
 .single-box h2 {
     font-family: 'Times New Roman', serif;
     font-size: 3rem;
@@ -202,22 +147,20 @@ h6 {
 .single-box p {
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
-    line-height: 1.6; /* Adds space between lines of text for readability */
+    line-height: 1.6;
     margin: 0;
 }
 
 /* ===========================
-   5. Lists & Buttons
+   5. Lists, Buttons & Forms
    =========================== */
 ul {
-    /* Removed background-color here so it blends with the card */
-    padding-left: 20px; /* Standard indentation for lists */
+    padding-left: 20px;
     font-size: 20px;
     text-align: left;
-    list-style-position: outside; /* Bullets sit outside the text block */
+    list-style-position: outside;
 }
 
-/* Custom class to style the titles inside the list area */
 .list-category {
     font-weight: bold;
     display: block;
@@ -234,39 +177,37 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 30px;
-    cursor: pointer; /* Changes mouse cursor to a hand pointer */
-    transition: transform 0.2s; /* Smooth animation speed */
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-/* What happens when you hover over the button */
 button:hover {
-    transform: scale(1.05); /* Makes button slightly larger */
-    opacity: 0.9; /* Makes it slightly transparent */
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
-/* ===========================
-   6. Mobile Responsive
-   =========================== */
-/* Rules apply only when screen width is 768px or smaller (Tablets/Phones) */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stacks image and text vertically */
-        text-align: center;
-    }
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-    .single-box {
-        text-align: center;
-        align-items: center; 
-        width: 100%;
-        margin: 0;
-    }
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
 
-    .about-image-wrapper {
-        max-width: 80%;
-        margin-bottom: 20px;
-    }
-    
-    h1 {
-        font-size: 50px; /* Smaller title on mobile */
-    }
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
 }
