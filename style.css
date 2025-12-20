@@ -211,3 +211,28 @@ button:hover {
     list-style: none;
     padding: 0;
 }
+.social-links {
+  display: flex;
+  justify-content: center; /* Centers the group horizontally */
+  align-items: center;     /* Aligns them vertically */
+  gap: 20px;               /* Space between icons */
+  padding: 40px;
+}
+
+.social-links img {
+  width: 60px;              /* Set your desired size */
+  height: 60px;             /* Must match width for a perfect circle */
+  border-radius: 50%;       /* Makes the image round */
+  object-fit: cover;        /* Ensures the image fills the circle without stretching */
+  border: 2px solid #ccc;   /* Optional: adds a border around the circle */
+  transition: transform 0.3s;
+}
+
+/* Optional: Subtle zoom effect when you hover */
+.social-links img:hover {
+  transform: scale(1.1);
+  border-color: #0077b5;    /* Optional: border changes color on hover */
+}
+.card{ 
+    text-align: center;
+}
