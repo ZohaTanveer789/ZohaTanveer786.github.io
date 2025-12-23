@@ -1,175 +1,680 @@
-/* ===========================
+/*===========================
+
    1. Global & Background
+
    =========================== */
+
 body {
-    background-size: cover; 
+
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     margin: 20px;
     font-family: sans-serif;
     text-align: center;
+
 }
+
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
+
+
 /* ===========================
+
    2. Navigation
+
    =========================== */
+
+nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+
+
 nav a {
+
+
+
     display: inline-block;
-    padding: 20px;
-    margin: 0 20px;
+    padding: 20px 0px;
+    margin: 10px 20px 0 20px;
     color: burlywood;
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
+    position: relative;
+
+
+
 }
 
-/* Global Fixes */
-nav a:hover {
-    color: #5D4037;
-    text-decoration: underline;
+
+
+
+
+
+
+nav a::after {
+
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: burlywood;
+    transition: width 0.3s;
+    display: inline;
+
 }
+
+
+
+
+
+
+
+nav a:hover::after {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+
+
+
+}
+
+
+
+
+
+
+
+
 
 /* ===========================
+
+
+
    3. Layout Containers
+
+
+
    =========================== */
+
+
+
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
+
+ display: flex;
+ align-items: center;
+justify-content: center;
+ gap: 50px;
+ max-width: 1100px;
+ margin: 50px auto;
+padding: 0 20px;
+font-size: 1.2rem;
+border-radius: 16px;
 }
+
+
 
 .main-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    max-width:2000PX;
+
+
+
 }
+
+.flower img{
+
+   
+
+    margin-left: auto;
+
+    width: fit-content;
+
+    height: auto;
+
+    border-radius: 30px;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+
+
+}
+
+
+
+
+
+
 
 .single-box {
-    flex: 0 1 auto;
+
+
+
     max-width: 600px;
+
+
+
     display: flex;
+
+
+
     flex-direction: column;
-    align-items: flex-start; 
+
+
+
+    align-items: flex-start;
+
+
+
     justify-content: flex-start;
+
+
+
     background-color: burlywood;
+
+
+
     color: black;
-    padding: 40px;
-    border-radius: 10px;
+
+
+
+    padding: 20px;
+
+
+
+    border-radius: 16px;
+
+
+
     text-align: left;
-    margin: 5px;
-    box-sizing: border-box; 
+
+
+
+    box-sizing: border-box;
+
+
+
 }
+
+.hobby-card{
+
+    background-color: burlywood;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    height: auto;
+
+    max-width: 800px;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+
+    color:black;
+
+
+
+}
+
+.hobby-card:hover {
+
+    background-color: #925f34; /* A slightly darker tan on hover */
+
+    transform: translateY(-10px); /* Lifts the card up slightly */
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a shadow for depth */
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .card {
+
     background-color: burlywood;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 0px;
+
+    display: flex;
+
+    flex-direction: column;
+
     box-sizing: border-box;
+
     text-align: left;
+
+    height: auto;
+
+    max-width: 800px;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+
 }
 
-.card h2 {
-    margin: 0 0 15px 0;
+.card:hover {
+
+    background-color: #925f34; /* A slightly darker tan on hover */
+
+    transform: translateY(-10px); /* Lifts the card up slightly */
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a shadow for depth */
+
 }
 
-.card p,
+
+
+.main-container-journey {
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    padding: 0 20px;
+
+    align-items: start; /* Ensures they both start at the same top height */
+
+}
+
+
+
+.about-card {
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    margin: 0; /* Remove existing margins to prevent offset */
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    font-size: 1.3rem;
+
+    text-align: left;
+
+}
+
+
+
+.right-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px; /* Space between the image and the quote card */
+
+    width: 100%;
+
+}
+
+
+
+.journey-image-wrapper {
+
+    width: 100%;
+
+}
+
+
+
+.journey-image-wrapper img {
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 16px;
+
+    display: block;
+
+}
+
+
+
+.quote-card {
+
+    width: 100%; /* Now matches the width of the image wrapper */
+
+    max-width: none; /* Remove previous max-width to allow it to fill column */
+
+    background: #414a37;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    color: white;
+
+}
+
+
+
+
+
 .card ul {
-    margin-top: 0;
-    margin-bottom: 0;
+
+    margin: 0;
+
+    padding-left: 20px;
+
+    list-style-type: disc;
+
+    font-size: 1.2rem;
+
 }
+
+
+
+
+
+.learning-card{
+
+    border-radius: 16px;
+
+    padding: 40px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    height: 100%;
+
+    font-size: 1.2rem;
+
+    margin: 80px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.project-card{
+
+
+
+    background-color: burlywood;
+
+
+
+    border-radius: 20px;
+
+
+
+    padding: 30px;
+
+
+
+    display: flex;
+
+
+
+    flex-direction: column;
+
+
+
+    box-sizing: border-box;
+
+
+
+    text-align: left;
+
+
+
+    margin: 0 auto 30px auto;
+
+
+
+   
+
+
+
+}
+
+
+
+
 
 .about-image-wrapper {
+
+
+
     flex: 1;
+
+
+
     max-width: 450px;
+
+
+
 }
+
+
+
+
+
+
 
 .about-image-wrapper img {
+
+
+
     width: 100%;
+
+
+
     height: auto;
+
+
+
     border-radius: 30px;
+
+
+
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+
+
 }
 
+
+
 /* ===========================
+
    4. Typography
+
    =========================== */
+
 h1 {
+
     font-family: 'Times New Roman', serif;
+
     font-size: 80px;
+
     color: black;
+
     margin-top: 50px;
+
     margin-bottom: 20px;
+
 }
+
+
 
 h3 {
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 1.2rem;
+
     font-weight: normal;
+
     letter-spacing: 1px;
+
     color: black;
+
     margin-top: 5px;
+
     margin-bottom: 40px;
+
 }
+
+
 
 h6 {
+
     text-align: left;
+
     font-size: 20px;
+
     font-family: Arial, sans-serif;
+
     color: rgba(122, 37, 37, 0.61);
+
     font-weight: normal;
+
     letter-spacing: 1px;
+
     margin: 0 0 20px 0;
+
 }
+
+
 
 .single-box h2 {
+
     font-family: 'Times New Roman', serif;
+
     font-size: 3rem;
+
     font-weight: bold;
+
     color: black;
+
     margin-top: 0;
+
     margin-bottom: 20px;
+
 }
+
+
 
 .single-box p {
+
     font-family: Arial, sans-serif;
+
     font-size: 1.2rem;
+
     line-height: 1.6;
+
     margin: 0;
+
 }
+
+
 
 /* ===========================
+
    5. Lists, Buttons & Forms
+
    =========================== */
+
 ul {
+
     padding-left: 20px;
+
     font-size: 20px;
+
     text-align: left;
+
     list-style-position: outside;
+
 }
+
+
 
 .list-category {
+
     font-weight: bold;
+
     display: block;
+
     margin-top: 15px;
+
     margin-bottom: 5px;
+
     font-size: 1.1em;
+
 }
 
+
+
 button {
+
     padding: 15px 30px;
     background-color: burlywood;
     color: #5D4037;
@@ -179,22 +684,33 @@ button {
     border-radius: 30px;
     cursor: pointer;
     transition: transform 0.2s;
+
 }
 
+
+
 button:hover {
+
     transform: scale(1.05);
     opacity: 0.9;
 }
 
+
+
 /* Form Styling */
+
 .contact-form {
+
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contact-form input, 
+
+
+.contact-form input,
 .contact-form textarea {
+
     width: 100%;
     padding: 12px;
     border-radius: 10px;
@@ -203,15 +719,21 @@ button:hover {
     box-sizing: border-box;
 }
 
+
+
 .contact-form textarea {
     resize: vertical;
 }
+
+
 
 .contact-list {
     list-style: none;
     padding: 0;
 }
+
 .social-links {
+
   display: flex;
   justify-content: center; /* Centers the group horizontally */
   align-items: center;     /* Aligns them vertically */
@@ -219,20 +741,9 @@ button:hover {
   padding: 40px;
 }
 
+
+
 .social-links img {
   width: 60px;              /* Set your desired size */
   height: 60px;             /* Must match width for a perfect circle */
-  border-radius: 50%;       /* Makes the image round */
-  object-fit: cover;        /* Ensures the image fills the circle without stretching */
-  border: 2px solid #ccc;   /* Optional: adds a border around the circle */
-  transition: transform 0.3s;
-}
-
-/* Optional: Subtle zoom effect when you hover */
-.social-links img:hover {
-  transform: scale(1.1);
-  border-color: #0077b5;    /* Optional: border changes color on hover */
-}
-.card{ 
-    text-align: center;
-}
+  border-radius: 50%;  }     /* Makes the image round */
