@@ -38,7 +38,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    text-decoration: none;
 
 }
 
@@ -47,14 +47,14 @@ nav {
 nav a {
 
     display: inline-block;
-    padding: 20px 0px;
-    margin: 10px 20px 0 20px;
+    margin-top: 20px;
+    margin-left: 55px;
     color: burlywood;
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
     position: relative;
-
+    text-decoration: none;
 
 
 }
@@ -70,17 +70,17 @@ nav a::after {
     background: burlywood;
     transition: width 0.3s;
     display: inline;
-
+    text-decoration: none;
 }
 
 nav a:hover::after {
     width: 100%;
     text-align: center;
     justify-content: center;
-
-
-
+    text-decoration: none;
 }
+ 
+
 /* ===========================
    3. Layout Containers
    =========================== */
@@ -110,6 +110,7 @@ border-radius: 16px;
     max-width:1400PX;
     align-items: stretch;
     min-width:300px;
+    text-decoration: none;
 
 }
 
@@ -165,6 +166,7 @@ border-radius: 16px;
     padding: 20px;
     transition: all 0.3s ease;
     cursor: pointer;
+    text-decoration: none;
 
 }
 
@@ -281,10 +283,15 @@ border-radius: 16px;
     font-size: 1.2rem;
     margin: 80px;
 }
-
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
 .project-card{
 
-    background-color: burlywood;
+    background-color:#DBC2A6;
     border-radius: 20px;
     padding: 30px;
     display: flex;
@@ -292,6 +299,7 @@ border-radius: 16px;
     box-sizing: border-box;
     text-align: left;
     margin: 0 auto 30px auto;
+    max-width: fit-content;
 
 }
 
@@ -571,39 +579,125 @@ button:hover {
     opacity: 1;
 }
 
-/* The Bottom Bar */
-.footer-bottom {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-.copyright {
-    font-size: 0.8rem;
-    color: #666;
+.portfolio-footer {
+  background:#4A4A4A;
+  color: #ccc;
+  padding: 4rem 2rem 2rem;
+  margin-top: 5rem;
 }
 
 .footer-container {
- display: flex;
- justify-content: center;
- gap: 30px;
- max-width: 9500px;
- border-radius: 20px; 
- 
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
 }
 
-.footer-card {
- flex: 1; 
- background-color: burlywood;
- text-align: left;
- border-radius: 20px;
- padding: 10px;
- 
- 
+.footer-brand h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
-.links{
+
+.footer-brand p {
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #fff;
+  color: #0a0a0a;
+  transform: translateY(-3px);
+}
+
+.link-column h4 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.link-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.link-column li {
+  margin-bottom: 0.8rem;
+}
+
+.link-column a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.link-column a:hover {
+  color: #fff;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .portfolio-footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
     justify-content: center;
-    gap: 0px;
-   
+  }
+  
+  .footer-brand h3 {
+    font-size: 1.5rem;
+  }
 }
+
+
+
