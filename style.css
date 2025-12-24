@@ -141,7 +141,6 @@ border-radius: 16px;
     border-radius: 16px;
     padding: 20px;
     transition: all 0.3s ease;
-    cursor: pointer;
     color:black;
 
 }
@@ -165,10 +164,16 @@ border-radius: 16px;
     border-radius: 16px;
     padding: 20px;
     transition: all 0.3s ease;
-    cursor: pointer;
     text-decoration: none;
 
 }
+.card ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+.card ul li a:hover {
+    color: #5D4037;}
 
 .card:hover {
 
@@ -508,7 +513,7 @@ button:hover {
   display: flex;
   justify-content: center; /* Centers the group horizontally */
   align-items: center;     /* Aligns them vertically */
-  gap: 20px;               /* Space between icons */
+  gap: 40px;               /* Space between icons */
   padding: 40px;
 }
 
