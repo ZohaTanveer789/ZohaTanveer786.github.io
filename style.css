@@ -46,8 +46,6 @@ nav {
 
 nav a {
 
-
-
     display: inline-block;
     padding: 20px 0px;
     margin: 10px 20px 0 20px;
@@ -60,12 +58,6 @@ nav a {
 
 
 }
-
-
-
-
-
-
 
 nav a::after {
 
@@ -81,12 +73,6 @@ nav a::after {
 
 }
 
-
-
-
-
-
-
 nav a:hover::after {
     width: 100%;
     text-align: center;
@@ -95,27 +81,9 @@ nav a:hover::after {
 
 
 }
-
-
-
-
-
-
-
-
-
 /* ===========================
-
-
-
    3. Layout Containers
-
-
-
    =========================== */
-
-
-
 .about-container {
 
  display: flex;
@@ -139,158 +107,63 @@ border-radius: 16px;
     margin: 0 auto;
     padding: 40px 20px;
     justify-content: center;
-    max-width:2000PX;
-
-
-
-}
-
-.flower img{
-
-   
-
-    margin-left: auto;
-
-    width: fit-content;
-
-    height: auto;
-
-    border-radius: 30px;
-
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
-
+    max-width:1400PX;
+    align-items: stretch;
+    min-width:300px;
 
 }
-
-
-
-
-
 
 
 .single-box {
-
-
-
+    
     max-width: 600px;
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     align-items: flex-start;
-
-
-
     justify-content: flex-start;
-
-
-
     background-color: burlywood;
-
-
-
     color: black;
-
-
-
     padding: 20px;
-
-
-
     border-radius: 16px;
-
-
-
     text-align: left;
-
-
-
     box-sizing: border-box;
-
-
-
 }
 
-.hobby-card{
-
-    background-color: burlywood;
+.hobby-card {
 
     display: flex;
-
     flex-direction: column;
-
     box-sizing: border-box;
-
     text-align: left;
-
     height: auto;
-
     max-width: 800px;
-
     border-radius: 16px;
-
     padding: 20px;
-
     transition: all 0.3s ease;
-
     cursor: pointer;
-
     color:black;
-
-
 
 }
 
 .hobby-card:hover {
-
     background-color: #925f34; /* A slightly darker tan on hover */
-
     transform: translateY(-10px); /* Lifts the card up slightly */
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a shadow for depth */
-
 }
 
 
-
-
-
-
-
-
-
-
-
 .card {
-
+    flex: 1;
     background-color: burlywood;
-
     display: flex;
-
     flex-direction: column;
-
     box-sizing: border-box;
-
     text-align: left;
-
     height: auto;
-
-    max-width: 800px;
-
+    max-width: 500px;
     border-radius: 16px;
-
     padding: 20px;
-
     transition: all 0.3s ease;
-
     cursor: pointer;
 
 }
@@ -298,257 +171,147 @@ border-radius: 16px;
 .card:hover {
 
     background-color: #925f34; /* A slightly darker tan on hover */
-
     transform: translateY(-10px); /* Lifts the card up slightly */
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a shadow for depth */
 
 }
-
-
-
 .main-container-journey {
-
     display: grid;
-
     grid-template-columns: 1.5fr 1fr;
-
-    gap: 30px;
-
+    grid-template-rows: auto auto;
+    gap: 20px;
     max-width: 1200px;
-
-    margin: 50px auto;
-
+    margin: 20px auto;
     padding: 0 20px;
-
-    align-items: start; /* Ensures they both start at the same top height */
-
 }
 
 
+
+.working {
+    
+    grid-column: 1 / -1;
+    grid-row: 2;
+    background-color: #DBC2A6;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.working p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.working ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.about-card p, .working p {
+    margin: 0;
+    padding-bottom: 10px
+}
 
 .about-card {
-
+    text-indent: 80px;
     border-radius: 16px;
-
     padding: 30px;
-
     margin: 0; /* Remove existing margins to prevent offset */
-
     width: 100%;
-
     box-sizing: border-box;
-
     font-size: 1.3rem;
-
     text-align: left;
+    grid-column: 1;
+    grid-row: 1;
 
 }
-
-
 
 .right-column {
 
     display: flex;
-
     flex-direction: column;
-
     gap: 20px; /* Space between the image and the quote card */
-
     width: 100%;
+    grid-column: 2;
+    grid-row: 1;
 
 }
-
-
 
 .journey-image-wrapper {
 
     width: 100%;
-
 }
-
-
 
 .journey-image-wrapper img {
 
     width: 100%;
-
     height: auto;
-
     border-radius: 16px;
-
     display: block;
 
 }
 
-
-
 .quote-card {
 
     width: 100%; /* Now matches the width of the image wrapper */
-
     max-width: none; /* Remove previous max-width to allow it to fill column */
-
     background: #414a37;
-
     border-radius: 16px;
-
     padding: 20px;
-
     box-sizing: border-box;
-
     color: white;
-
 }
-
-
-
-
 
 .card ul {
-
     margin: 0;
-
     padding-left: 20px;
-
     list-style-type: disc;
-
     font-size: 1.2rem;
-
 }
-
-
-
-
 
 .learning-card{
 
     border-radius: 16px;
-
     padding: 40px 20px;
-
     display: flex;
-
     flex-direction: column;
-
     box-sizing: border-box;
-
     text-align: left;
-
     height: 100%;
-
     font-size: 1.2rem;
-
     margin: 80px;
-
-
-
 }
-
-
-
-
-
-
-
-
 
 .project-card{
 
-
-
     background-color: burlywood;
-
-
-
     border-radius: 20px;
-
-
-
     padding: 30px;
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     box-sizing: border-box;
-
-
-
     text-align: left;
-
-
-
     margin: 0 auto 30px auto;
 
-
-
-   
-
-
-
 }
-
-
-
 
 
 .about-image-wrapper {
-
-
-
     flex: 1;
-
-
-
     max-width: 450px;
-
-
-
 }
-
-
-
-
-
-
 
 .about-image-wrapper img {
-
-
-
     width: 100%;
-
-
-
     height: auto;
-
-
-
     border-radius: 30px;
-
-
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
-
 
 }
 
-
-
 /* ===========================
-
    4. Typography
-
    =========================== */
-
 h1 {
 
     font-family: 'Times New Roman', serif;
@@ -743,7 +506,104 @@ button:hover {
 
 
 
-.social-links img {
-  width: 60px;              /* Set your desired size */
-  height: 60px;             /* Must match width for a perfect circle */
-  border-radius: 50%;  }     /* Makes the image round */
+
+.social-links img{
+  width: 60px;       
+  height: 60px;     
+  border-radius: 50%; 
+}
+ .copyright {
+    font-size: 0.75rem;
+    color: black;}
+
+    .site-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    background-color: #f9f9f9; /* Or a dark color if you prefer */
+    padding: 40px 20px 20px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Makes it stack on mobile */
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Make form inputs smaller for the footer */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.footer-btn {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* Social Icon Styling */
+.social-icons img {
+    width: 45px; /* Makes icons small and uniform */
+    height: 45px;
+    margin-right: 15px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+}
+
+/* The Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.footer-container {
+ display: flex;
+ justify-content: center;
+ gap: 30px;
+ max-width: 9500px;
+ border-radius: 20px; 
+ 
+}
+
+.footer-card {
+ flex: 1; 
+ background-color: burlywood;
+ text-align: left;
+ border-radius: 20px;
+ padding: 10px;
+ 
+ 
+}
+.links{
+    justify-content: center;
+    gap: 0px;
+   
+}
